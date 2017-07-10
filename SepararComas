@@ -1,3 +1,4 @@
+    //Estos ejemplos los encontraran en el archivo de hola mundo  
     
     public String separar(int numSeparar){
         numSeparar = 1235000;
