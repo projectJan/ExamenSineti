@@ -8,14 +8,15 @@ Es una arquitectura que permite tener los datos separados
 
 Sección 2
 1. Realiza un programa en groovy que separe por comas un numero dado:
-Ejemplo: al ingresar 1235000 deberia obtener  1,235,000
+Ejemplo: al ingresar 1235000 deberia obtener  1,235,000 (buscar en la carpeta de Helloworld)
 
-2. Realiza un programa en groovy que implemente el algotimo de la burbuja
+2. Realiza un programa en groovy que implemente el algotimo de la burbuja (buscar en la carpeta de Helloworld)
 
 
 Sección 3
 Para la siguiente sección necesitas instalar grails 3.2.10
-1. Realiza un controlador en grails llamado Test, que en el action greeting, muestre en pantalla un saludo
+1. Realiza un controlador en grails llamado Test, que en el action greeting, muestre en pantalla un saludo 
+(buscar en la carpeta de Helloworld)
 2. Realiza una clase de dominio llamada Ship, la cual mapea atributos de un barco, como nombre, capacidad de pasajeros etc.
 3. En el archivo Boostrap.groovy de grails, crea tres instancias de Ship, y guardalas en la base de datos.(Grails tiene una base de datos en memoria, la cual puede ser accedia en /dbconsole)
 4. Toma una impresión de pantalla de una consulta a la tabla ship, y guardala en el proyecto de grails
