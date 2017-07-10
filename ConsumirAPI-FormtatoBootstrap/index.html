@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="bootstrap-table.js"></script>
+<script src="bootstrap-table-zh-CN.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap-table.css">
+</head>
+<body>
+<br/>
+<h2>Create Table from JSON String</h2>
+<div style="width:70%;">
+<table id="table"></table>
+<div>
+
+
+<p id="demo"></p>
+
+<script>
+
+$('#table').bootstrapTable({
+    columns: [{
+        field: 'id',
+        title: 'ID'
+    }, {
+        field: 'name',
+        title: 'Nombre'
+    }, {
+        field: 'username',
+        title: 'UserName'
+    }, {
+        field: 'email',
+        title: 'Email'
+    },
+	{
+        field: 'address',
+        title: 'Direccion'
+    },
+	{
+        field: 'geo',
+        title: 'Geo'
+    }
+	],
+    data: [{
+        id: 1,
+        name: "Leanne Graham",
+        username: 'Bret',
+		email: 'Sincere@april.biz',
+		address: {
+					street: 'Kulas Light',
+					suite: 'Apt. 556',
+					city: 'Gwenborough',
+					zipcode: '92998-3874',
+						geo: {
+								lat: '-37.3159',
+								lng: '81.1496'
+							}
+			}
+    }, 
+	{
+          id: 2,
+    name: "Ervin Howell",
+    username: "Antonette",
+    email: "Shanna@melissa.tv"
+    }
+	]
+});
+
+var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+
+</script>
+
+<script>
+    $('#run').click(function() {
+        var root = 'https://jsonplaceholder.typicode.com';
+        $.ajax({
+          url: root + '/users',
+          method: 'GET'
+        }).then(function(data) {
+          var str = JSON.stringify(data, null, '\t')
+          $('#table').bootstrapTable(str);
+          
+        });
+      });
+
+    </script>
+
+
+
+</body>
+</html>
