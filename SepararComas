@@ -1,0 +1,10 @@
+    
+    public String separar(int numSeparar){
+        numSeparar = 1235000;
+        
+        DecimalFormat df = new DecimalFormat("###,###,###");        
+        string fNum = df.format(numSeparar);
+        return fNum;
+    }
+
+    
